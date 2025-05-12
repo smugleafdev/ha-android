@@ -280,7 +280,7 @@ jobs:
           disable-animations: true
           disk-size: 1G # We need to ensure that there is enough space for the emulator to run. If not we get 'Failed to commit install' errors.
           heap-size: 1G
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          emulator-options: -memory 3072 -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
           profile: ${{ matrix.configuration.profile }}
           target: ${{ matrix.configuration.target }}
           system-image-api-level: ${{ matrix.configuration.system-image-api-level }}
@@ -296,7 +296,7 @@ jobs:
           disable-animations: true
           disk-size: 1G
           heap-size: 1G
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          emulator-options: -memory 3072 -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
           profile: ${{ matrix.configuration.profile }}
           target: ${{ matrix.configuration.target }}
           system-image-api-level: ${{ matrix.configuration.system-image-api-level }}
